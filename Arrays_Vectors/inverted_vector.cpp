@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using std::vector;
 
@@ -14,6 +15,11 @@ int main(){
     result.push_back(number);
     }
     std::cout << "The numbers in the vector are \n";
+    for(const auto &element : result){
+        std::cout << element << "\n";
+    }
+    std::reverse(result.begin(), result.end());
+    std::cout << "The numbers in the vector in reverse order are \n";
     for(const auto &element : result){
         std::cout << element << "\n";
     }
